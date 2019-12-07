@@ -18,18 +18,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnIn =findViewById(R.id.btnIn);
         btnUp =findViewById(R.id.btnUp);
+
+        btnIn.setOnClickListener(this);
+        btnUp.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnIn:
-
                 startActivity(new Intent(this, LoginActivity.class));
                 break;
 
             case R.id.btnUp:
-
                 startActivity(new Intent(this, RegisterActivity.class));
         }
 
