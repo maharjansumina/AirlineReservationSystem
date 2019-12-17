@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#B98DD1"
     tools:context=".SearchFlightFragments.OneTripFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="One Way Trip"
+        style="@style/TextViewDesign"/>
 
-</FrameLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        android:columnCount="2">
+
+        <TextView
+            android:text="From"
+            style="@style/GridTextView"/>
+
+        <TextView
+            android:text="TO"
+            style="@style/GridTextView"/>
+
+        <Spinner
+            android:id="@+id/spinFrom"
+            style="@style/GridEditText"/>
+
+        <Spinner
+            android:id="@+id/spinTo"
+            style="@style/GridEditText"/>
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:columnCount="1">
+
+        <TextView
+            android:text="Departure"
+            style="@style/GridTextView"/>
+
+        <EditText
+            android:id="@+id/etDeparture"
+            style="@style/GridEditText"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        android:columnCount="2">
+
+        <TextView
+            android:text="Nationality"
+            style="@style/GridTextView"/>
+
+        <TextView
+            android:text="Travellers"
+            style="@style/GridTextView"/>
+
+        <Spinner
+            android:id="@+id/spinNationality"
+            style="@style/GridEditText"/>
+
+        <EditText
+            android:id="@+id/etTravellers"
+            style="@style/GridEditText"/>
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:text="Search Flight"
+        style="@style/ButtonDesign"/>
+
+
+</LinearLayout>
