@@ -3,9 +3,13 @@ package com.softwarica.airlinereservationsystem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.softwarica.airlinereservationsystem.SearchFlightFragments.OneTripFragment;
+import com.softwarica.airlinereservationsystem.SearchFlightFragments.RoundTripFragment;
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,6 +29,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         cvCancel = findViewById(R.id.cvCancel);
         cvLogout = findViewById(R.id.cvLogout);
         tvName = findViewById(R.id.tvName);
+
         cvSearhFlight.setOnClickListener(this);
         cvEditBooking.setOnClickListener(this);
         cvProfile.setOnClickListener(this);
@@ -37,6 +42,11 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()) {
+            case R.id.cvSearchFlight:
+                startActivity(new Intent(this, SearchFlightActivity.class));
+                break;
+        }
     }
 }
+
