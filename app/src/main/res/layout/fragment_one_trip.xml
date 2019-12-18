@@ -48,8 +48,10 @@
             android:text="Departure"
             style="@style/GridTextView"/>
 
-        <EditText
-            android:id="@+id/etDeparture"
+        <TextView
+            android:hint="Tap to choose date"
+            android:id="@+id/tvDeparture"
+            android:inputType="date"
             style="@style/GridEditText"/>
 
     </GridLayout>
@@ -75,7 +77,8 @@
 
         <EditText
             android:id="@+id/etTravellers"
-            style="@style/GridEditText"/>
+            style="@style/GridEditText"
+            android:inputType="number"/>
 
     </GridLayout>
 

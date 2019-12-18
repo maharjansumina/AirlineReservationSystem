@@ -42,12 +42,16 @@
             android:text="Return"
             style="@style/GridTextView"/>
 
-        <EditText
-            android:id="@+id/etDeparture"
+        <TextView
+            android:hint="Select date"
+            android:id="@+id/tvDeparture"
+            android:inputType="date"
             style="@style/GridEditText"/>
 
-        <EditText
-            android:id="@+id/etReturn"
+        <TextView
+            android:hint="Select date"
+            android:id="@+id/tvReturn"
+            android:inputType="date"
             style="@style/GridEditText"/>
 
         <TextView
@@ -64,7 +68,8 @@
 
         <EditText
             android:id="@+id/etTravellers"
-            style="@style/GridEditText"/>
+            style="@style/GridEditText"
+            android:inputType="number"/>
 
     </GridLayout>
 

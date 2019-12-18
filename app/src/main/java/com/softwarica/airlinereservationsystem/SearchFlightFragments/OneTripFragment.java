@@ -2,6 +2,7 @@ package com.softwarica.airlinereservationsystem.SearchFlightFragments;
 
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,9 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.softwarica.airlinereservationsystem.R;
 
@@ -24,7 +27,9 @@ import java.util.Calendar;
 public class OneTripFragment extends Fragment implements DatePickerDialog.OnDateSetListener {
 
     private Spinner spinFrom, spinTo, spinNationality;
-    private EditText etDeparture, etTravellers;
+    private TextView tvDeparture;
+    private EditText etTravellers;
+    private Button btnSearch;
 
 
     public OneTripFragment() {
@@ -38,11 +43,15 @@ public class OneTripFragment extends Fragment implements DatePickerDialog.OnDate
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_one_trip, container, false);
 
+        // Getting application context
+        Context context = getActivity();
+
         spinFrom = view.findViewById(R.id.spinFrom);
         spinTo = view.findViewById(R.id.spinTo);
         spinNationality = view.findViewById(R.id.spinNationality);
-        etDeparture = view.findViewById(R.id.etDeparture);
+        tvDeparture = view.findViewById(R.id.tvDeparture);
         etTravellers = view.findViewById(R.id.etTravellers);
+        btnSearch = view.findViewById(R.id.btnSearch);
 
         String From [] = {"Kathmandu" , "Pokhara", "Janakpur" , "Nepalgunj", "Birtnagar"};
         final ArrayAdapter from = new ArrayAdapter<String>(
@@ -68,7 +77,7 @@ public class OneTripFragment extends Fragment implements DatePickerDialog.OnDate
         );
         spinNationality.setAdapter(nationality);
 
-        etDeparture.setOnClickListener(new View.OnClickListener() {
+        tvDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loadDeparture();
@@ -82,7 +91,7 @@ public class OneTripFragment extends Fragment implements DatePickerDialog.OnDate
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         String date =  (month + 1) + "/" + dayOfMonth + "/" + year;
-        etDeparture.setText(date);
+        tvDeparture.setText(date);
     }
 
     private void loadDeparture(){
@@ -91,10 +100,10 @@ public class OneTripFragment extends Fragment implements DatePickerDialog.OnDate
         int month = c.get(Calendar.MONTH);
         int day = c.get(Calendar.DAY_OF_MONTH);
 
-//        DatePickerDialog datePickerDialog = new DatePickerDialog(
-//                getActivity().getApplicationContext()
-//                year, month, day);
-//        datePickerDialog.getDatePicker().setMinDate(c.getTimeInMillis());
-//        datePickerDialog.show();
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                getActivity(), this,
+                year, month, day);
+        datePickerDialog.getDatePicker().setMinDate(c.getTimeInMillis());
+        datePickerDialog.show();
     }
 }
