@@ -1,49 +1,32 @@
 package com.softwarica.airlinereservationsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
+import androidx.viewpager.widget.ViewPager;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
+import com.google.android.material.tabs.TabLayout;
 import com.softwarica.airlinereservationsystem.SearchFlightFragments.OneTripFragment;
 import com.softwarica.airlinereservationsystem.SearchFlightFragments.RoundTripFragment;
 
-public class SearchFlightActivity extends AppCompatActivity implements View.OnClickListener {
+public class SearchFlightActivity extends AppCompatActivity{
 
-    Button btnOne, btnRound;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_flight);
 
-        btnOne = findViewById(R.id.btnOne);
-        btnRound = findViewById(R.id.btnRound);
+        viewPager = findViewById(R.id.viewPager);
+        tabLayout = findViewById(R.id.tabId);
 
-        btnOne.setOnClickListener(this);
-        btnRound.setOnClickListener(this);
-    }
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#fff"));
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.addFragment(new OneTripFragment(), "One Way Trip");
+        viewPagerAdapter.addFragment(new RoundTripFragment(), "Round Way Trip");
 
-    @Override
-    public void onClick(View v) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        switch (v.getId()) {
-            case R.id.btnOne:
-                OneTripFragment oneTripFragment = new OneTripFragment();
-                fragmentTransaction.replace(R.id.FragmentContainer, oneTripFragment);
-                fragmentTransaction.commit();
-                break;
-
-            case R.id.btnRound:
-                RoundTripFragment roundTripFragment = new RoundTripFragment();
-                fragmentTransaction.replace(R.id.FragmentContainer, roundTripFragment);
-                fragmentTransaction.commit();
-                break;
-        }
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }
