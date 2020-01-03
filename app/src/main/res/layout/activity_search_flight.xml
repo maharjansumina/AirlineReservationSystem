@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".SearchFlightActivity">
 
@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#6F3B8D"
-                app:tabIndicatorHeight="2dp"
+                app:tabIndicatorHeight="3dp"
                 app:tabTextColor="#fff"/>
 
 

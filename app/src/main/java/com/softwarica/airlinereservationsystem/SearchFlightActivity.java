@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.graphics.Color;
 import android.os.Bundle;
 import com.google.android.material.tabs.TabLayout;
+import com.softwarica.airlinereservationsystem.Adapter.ViewPagerAdapter;
 import com.softwarica.airlinereservationsystem.SearchFlightFragments.OneTripFragment;
 import com.softwarica.airlinereservationsystem.SearchFlightFragments.RoundTripFragment;
 

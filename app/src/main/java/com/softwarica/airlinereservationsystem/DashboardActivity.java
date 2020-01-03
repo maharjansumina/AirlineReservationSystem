@@ -13,7 +13,7 @@ import com.softwarica.airlinereservationsystem.SearchFlightFragments.RoundTripFr
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView cvSearhFlight, cvEditBooking, cvProfile, cvFeedback, cvCancel, cvLogout;
+    private CardView cvSearhFlight, cvEditBooking, cvProfile, cvContactUs, cvCancel, cvLogout;
     private TextView tvName;
 
     @Override
@@ -25,7 +25,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         cvSearhFlight = findViewById(R.id.cvSearchFlight);
         cvEditBooking = findViewById(R.id.cvEditBooking);
         cvProfile = findViewById(R.id.cvProfile);
-        cvFeedback = findViewById(R.id.cvFeedback);
+        cvContactUs = findViewById(R.id.cvContactUs);
         cvCancel = findViewById(R.id.cvCancel);
         cvLogout = findViewById(R.id.cvLogout);
         tvName = findViewById(R.id.tvName);
@@ -33,7 +33,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         cvSearhFlight.setOnClickListener(this);
         cvEditBooking.setOnClickListener(this);
         cvProfile.setOnClickListener(this);
-        cvFeedback.setOnClickListener(this);
+        cvContactUs.setOnClickListener(this);
         cvCancel.setOnClickListener(this);
         cvLogout.setOnClickListener(this);
 
@@ -45,6 +45,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()) {
             case R.id.cvSearchFlight:
                 startActivity(new Intent(this, SearchFlightActivity.class));
+                break;
+
+            case R.id.cvContactUs:
+                startActivity(new Intent(this, ContactUsActivity.class));
                 break;
         }
     }

@@ -1,4 +1,4 @@
-package com.softwarica.airlinereservationsystem;
+package com.softwarica.airlinereservationsystem.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
