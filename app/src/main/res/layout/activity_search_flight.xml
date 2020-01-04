@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchFlightActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".SearchFlightActivity">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#6F3B8D"
-                app:tabIndicatorHeight="3dp"
-                app:tabTextColor="#fff"/>
+            android:id="@+id/tabId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E88E5"
+            app:tabIndicatorHeight="2dp"
+            app:tabTextColor="#fff"/>
 
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewPager"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+    </ScrollView>
 
-
-    </LinearLayout>
-
-
-</ScrollView>
+</LinearLayout>
