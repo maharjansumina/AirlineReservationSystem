@@ -10,7 +10,7 @@
 
     <style name="TextViewDesign">
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">35dp</item>
+        <item name="android:textSize">30dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAlignment">center</item>
@@ -21,7 +21,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_rowWeight">1</item>
         <item name="android:layout_columnWeight">1</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_margin">15dp</item>
         <item name="android:background">#3D0E5A</item>
@@ -33,16 +33,17 @@
         <item name="android:layout_margin">15dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">24dp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:textColorHint">#3E2B6F</item>
     </style>
 
     <style name="ButtonDesign">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:layout_margin">50dp</item>
+        <item name="android:layout_margin">15dp</item>
         <item name="android:background">#3D0E5A</item>
         <item name="android:textColor">#fff</item>
     </style>
@@ -53,7 +54,7 @@
         <item name="android:layout_rowWeight">1</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_margin">15dp</item>
-        <item name="android:textSize">25dp</item>
+        <item name="android:textSize">20dp</item>
     </style>
 
     <style name="GridEditText">
@@ -61,7 +62,7 @@
         <item name="android:layout_columnWeight">1</item>
         <item name="android:layout_rowWeight">1</item>
         <item name="android:layout_margin">15dp</item>
-        <item name="android:textSize">25dp</item>
+        <item name="android:textSize">20dp</item>
     </style>
 
 

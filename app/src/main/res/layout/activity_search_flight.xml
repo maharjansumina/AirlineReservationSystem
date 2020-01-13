@@ -7,15 +7,12 @@
     android:orientation="vertical"
     tools:context=".SearchFlightActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1E88E5"
+            android:background="#3D0E5A"
             app:tabIndicatorHeight="2dp"
             app:tabTextColor="#fff"/>
 
@@ -23,7 +20,5 @@
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
-    </ScrollView>
 
 </LinearLayout>
