@@ -50,6 +50,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             case R.id.cvContactUs:
                 startActivity(new Intent(this, ContactUsActivity.class));
                 break;
+
+            case R.id.cvCancel:
+                startActivity(new Intent(this, CancelBookingActivity.class));
+                break;
         }
     }
 }
