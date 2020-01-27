@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookingFlightActivity"></activity>
+        <activity android:name=".BookingDetail.BookingFlightActivity"></activity>
         <activity android:name=".CancelBookingActivity" />
         <activity android:name=".SearchFlightActivity" />
         <activity android:name=".ContactUsActivity" />

@@ -3,25 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#B98DD1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#B98DD1"
-        tools:context=".BookingFlightActivity">
+        tools:context=".BookingDetail.BookingFlightActivity">
 
         <TextView
-            android:text="Booking Flight Detail"
+            android:text="Passenger Information"
             style="@style/TextViewDesign"/>
 
-        <TextView
-            android:layout_marginTop="30dp"
-            android:id="@+id/tvFlightDetail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30sp"/>
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Enter First Name"
+                android:id="@+id/etFName"
+                style="@style/EditTextDesign"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Enter Last Name"
+                android:id="@+id/etLName"
+                style="@style/EditTextDesign"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:text="Contact Information"
+            style="@style/TextViewDesign"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -57,7 +77,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:text="Booking"
+            android:text="Add Details"
             android:id="@+id/btnBooking"
             style="@style/ButtonDesign"/>
 
