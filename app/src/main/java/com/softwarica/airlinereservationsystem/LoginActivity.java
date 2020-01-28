@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 password = etPassword.getText().toString();
 
                 if (email.equals("admin") && password.equals("admin")){
-                    Intent intent = new Intent(LoginActivity.this, SplashScreenActivity.DashboardActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                     startActivity(intent);
                 }
                 else{
