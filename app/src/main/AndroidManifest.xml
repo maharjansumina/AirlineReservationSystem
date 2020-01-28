@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".BookingDetail.BookingFlightActivity"></activity>
         <activity android:name=".CancelBookingActivity" />
-        <activity android:name=".SearchFlightActivity" />
+        <activity android:name=".BookingDetail.SearchFlightActivity" />
         <activity android:name=".ContactUsActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DashboardActivity" />
+        <activity android:name=".BottomNavigation.DashboardActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />

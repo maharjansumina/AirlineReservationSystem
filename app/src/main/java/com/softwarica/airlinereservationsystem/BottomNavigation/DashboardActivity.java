@@ -1,4 +1,4 @@
-package com.softwarica.airlinereservationsystem;
+package com.softwarica.airlinereservationsystem.BottomNavigation;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.softwarica.airlinereservationsystem.SearchFlightFragments.OneTripFragment;
-import com.softwarica.airlinereservationsystem.SearchFlightFragments.RoundTripFragment;
+import com.softwarica.airlinereservationsystem.CancelBookingActivity;
+import com.softwarica.airlinereservationsystem.ContactUsActivity;
+import com.softwarica.airlinereservationsystem.R;
+import com.softwarica.airlinereservationsystem.BookingDetail.SearchFlightActivity;
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 

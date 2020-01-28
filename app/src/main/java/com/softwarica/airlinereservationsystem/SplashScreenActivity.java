@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
+import com.softwarica.airlinereservationsystem.BottomNavigation.DashboardActivity;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
