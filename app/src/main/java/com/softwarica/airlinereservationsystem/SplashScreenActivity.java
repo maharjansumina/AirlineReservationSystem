@@ -1,14 +1,17 @@
 package com.softwarica.airlinereservationsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.softwarica.airlinereservationsystem.BottomNavigation.DashboardActivity;
+import com.softwarica.airlinereservationsystem.BookingDetail.SearchFlightActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

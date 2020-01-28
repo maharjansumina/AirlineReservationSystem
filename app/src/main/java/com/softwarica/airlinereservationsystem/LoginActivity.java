@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.softwarica.airlinereservationsystem.BottomNavigation.DashboardActivity;
-
 public class LoginActivity extends AppCompatActivity {
 
     EditText etEmail, etPassword;
@@ -46,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 password = etPassword.getText().toString();
 
                 if (email.equals("admin") && password.equals("admin")){
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, SplashScreenActivity.DashboardActivity.class);
                     startActivity(intent);
                 }
                 else{
