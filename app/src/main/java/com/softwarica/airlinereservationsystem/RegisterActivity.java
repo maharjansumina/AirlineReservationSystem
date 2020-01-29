@@ -11,11 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class RegisterActivity extends AppCompatActivity {
 
     EditText etName, etAddress, etPhone, etEmail, etPassword;
     Button btnRegister;
     TextView tvLoginLink;
+    CircleImageView imgProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnRegister = findViewById(R.id.btnRegister);
         tvLoginLink = findViewById(R.id.tvLoginLink);
+        imgProfile = findViewById(R.id.imgProfile);
 
         tvLoginLink.setOnClickListener(new View.OnClickListener() {
             @Override
