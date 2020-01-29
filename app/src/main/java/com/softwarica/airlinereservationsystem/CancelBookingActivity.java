@@ -9,18 +9,15 @@ import android.widget.TextView;
 
 public class CancelBookingActivity extends AppCompatActivity {
 
-    EditText etFlightId;
     TextView tvData;
-    Button btnCancel, btnSearch;
+    Button btnCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cancel_booking);
 
-        etFlightId = findViewById(R.id.etFlightId);
         tvData = findViewById(R.id.tvData);
         btnCancel = findViewById(R.id.btnCancel);
-        btnSearch = findViewById(R.id.btnSearch);
     }
 }

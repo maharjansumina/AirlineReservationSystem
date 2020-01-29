@@ -14,22 +14,6 @@
         android:background="#B98DD1"
         tools:context=".CancelBookingActivity">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:hint="Enter Flight ID"
-                android:id="@+id/etFlightId"
-                style="@style/EditTextDesign"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:text="Search"
-            android:id="@+id/btnSearch"
-            style="@style/ButtonDesign"/>
-
         <TextView
             android:id="@+id/tvData"
             android:layout_width="match_parent"
