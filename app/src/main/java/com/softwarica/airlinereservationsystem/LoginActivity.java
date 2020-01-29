@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.softwarica.airlinereservationsystem.bll.LoginBLL;
+import com.softwarica.airlinereservationsystem.strictmode.StrictModeClass;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -38,19 +42,26 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email, password;
-
-                email = etEmail.getText().toString();
-                password = etPassword.getText().toString();
-
-                if (email.equals("admin") && password.equals("admin")){
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-                    startActivity(intent);
-                }
-                else{
-                    //Toast.makeText(this, "Incorrect Email or Password", Toast.LENGTH_LONG).show();
-                }
+                login();
             }
         });
     }
+
+        private void login() {
+            String email = etEmail.getText().toString();
+            String password = etPassword.getText().toString();
+
+            LoginBLL loginBLL = new LoginBLL();
+
+            StrictModeClass.StrictMode();
+            if (loginBLL.checkUser(email, password)) {
+                Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(this, "Either email or password is incorrect", Toast.LENGTH_SHORT).show();
+                etEmail.requestFocus();
+            }
+
+        }
 }
