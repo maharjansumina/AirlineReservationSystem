@@ -12,7 +12,7 @@ import com.softwarica.airlinereservationsystem.BookingDetail.SearchFlightActivit
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView cvSearhFlight, cvEditBooking, cvProfile, cvContactUs, cvCancel, cvLogout;
+    private CardView cvSearhFlight, cvProfile, cvContactUs, cvCancel, cvLogout, cvMap;
     private TextView tvName;
 
     @Override
@@ -22,19 +22,19 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
         //Blinding
         cvSearhFlight = findViewById(R.id.cvSearchFlight);
-        cvEditBooking = findViewById(R.id.cvEditBooking);
         cvProfile = findViewById(R.id.cvProfile);
         cvContactUs = findViewById(R.id.cvContactUs);
         cvCancel = findViewById(R.id.cvCancel);
         cvLogout = findViewById(R.id.cvLogout);
+        cvMap = findViewById(R.id.cvMap);
         tvName = findViewById(R.id.tvName);
 
         cvSearhFlight.setOnClickListener(this);
-        cvEditBooking.setOnClickListener(this);
         cvProfile.setOnClickListener(this);
         cvContactUs.setOnClickListener(this);
         cvCancel.setOnClickListener(this);
         cvLogout.setOnClickListener(this);
+        cvMap.setOnClickListener(this);
 
 
     }
@@ -53,6 +53,15 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             case R.id.cvCancel:
                 startActivity(new Intent(this, CancelBookingActivity.class));
                 break;
+
+            case R.id.cvProfile:
+                startActivity(new Intent(this, ProfileActivity.class));
+                break;
+
+//            case R.id.cvLogout:
+//                startActivity(new Intent(this, LoginActivity.class));
+//                //Intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);// clear back stack
+//                break;
         }
     }
 }
