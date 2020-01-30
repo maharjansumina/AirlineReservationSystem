@@ -58,10 +58,14 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
 
-//            case R.id.cvLogout:
-//                startActivity(new Intent(this, LoginActivity.class));
-//                //Intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);// clear back stack
-//                break;
+            case R.id.cvMap:
+                startActivity(new Intent(this, MapsActivity.class));
+                break;
+
+            case R.id.cvLogout:
+                startActivity(new Intent(this, LoginActivity.class));
+                //Intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);// clear back stack
+                break;
         }
     }
 }

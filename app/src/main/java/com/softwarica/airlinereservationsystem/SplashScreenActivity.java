@@ -25,18 +25,21 @@ public class SplashScreenActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                SharedPreferences sharedPreferences = getSharedPreferences("User", MODE_PRIVATE);
-                String email = sharedPreferences.getString("email", "");
-                String password = sharedPreferences.getString("password", "");
-
-                if (email.equals("admin") && password.equals("admin")) {
-                    startActivity(new Intent(SplashScreenActivity.this, DashboardActivity.class));
-
-                }
-
-                else  {
-                    Toast.makeText(SplashScreenActivity.this, "Wrong Email or Password", Toast.LENGTH_SHORT).show();
-                }
+//                SharedPreferences sharedPreferences = getSharedPreferences("User", MODE_PRIVATE);
+//                String email = sharedPreferences.getString("email", "");
+//                String password = sharedPreferences.getString("password", "");
+//
+//                if (email.equals("admin") && password.equals("admin")) {
+//                    startActivity(new Intent(SplashScreenActivity.this, DashboardActivity.class));
+//
+//                }
+//
+//                else  {
+//                    Toast.makeText(SplashScreenActivity.this, "Wrong Email or Password", Toast.LENGTH_SHORT).show();
+//                }
+                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish(); //clear the activity
             }
         }, 2000);
 
