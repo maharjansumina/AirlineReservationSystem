@@ -8,6 +8,7 @@ public class User {
     private String password;
     private String conpassword;
     private String image;
+    private String admin;
 
     public User(String fullname, String phone, String address, String email, String password, String conpassword, String image) {
         this.fullname = fullname;
@@ -73,5 +74,12 @@ public class User {
 
     public void setImage(String image) {
         this.image = image;
+    }
+    public String getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(String admin) {
+        this.admin = admin;
     }
 }
