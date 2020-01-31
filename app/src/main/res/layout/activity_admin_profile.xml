@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#B98DD1">
 
     <LinearLayout
@@ -12,13 +11,7 @@
         android:orientation="vertical"
         android:layout_height="match_parent"
         android:background="#B98DD1"
-        tools:context=".ProfileActivity">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:id="@+id/imgUser"/>
+        tools:context=".Admin.AdminProfileActivity">
 
         <GridLayout
             android:layout_width="match_parent"
@@ -40,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:id="@+id/tvName"/>
+                android:id="@+id/tvAdminName"/>
 
             <TextView
                 android:layout_margin="20dp"
@@ -54,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:id="@+id/tvAddress"/>
+                android:id="@+id/tvAdminAddress"/>
 
             <TextView
                 android:layout_margin="20dp"
@@ -68,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:id="@+id/tvPhone"/>
+                android:id="@+id/tvAdminPhone"/>
 
             <TextView
                 android:layout_margin="20dp"
@@ -82,13 +75,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:id="@+id/tvEmail"/>
+                android:id="@+id/tvAdminEmail"/>
 
         </GridLayout>
 
         <Button
             android:text="Edit Profile"
-            android:id="@+id/btnEditUser"
+            android:id="@+id/btnEditAdmin"
             style="@style/ButtonDesign"/>
 
     </LinearLayout>

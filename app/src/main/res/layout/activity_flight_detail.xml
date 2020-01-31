@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#B98DD1"
     tools:context=".BookingDetail.FlightDetailActivity">
 
     <TextView

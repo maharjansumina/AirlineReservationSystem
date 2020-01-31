@@ -12,7 +12,7 @@ import com.softwarica.airlinereservationsystem.BookingDetail.SearchFlightActivit
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView cvSearhFlight, cvProfile, cvContactUs, cvCancel, cvLogout, cvMap;
+    private CardView cvSearchFlight, cvProfile, cvContactUs, cvCancel, cvLogout, cvMap;
     private TextView tvName;
 
     @Override
@@ -21,7 +21,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_dashboard);
 
         //Blinding
-        cvSearhFlight = findViewById(R.id.cvSearchFlight);
+        cvSearchFlight = findViewById(R.id.cvSearchFlight);
         cvProfile = findViewById(R.id.cvProfile);
         cvContactUs = findViewById(R.id.cvContactUs);
         cvCancel = findViewById(R.id.cvCancel);
@@ -29,7 +29,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         cvMap = findViewById(R.id.cvMap);
         tvName = findViewById(R.id.tvName);
 
-        cvSearhFlight.setOnClickListener(this);
+        cvSearchFlight.setOnClickListener(this);
         cvProfile.setOnClickListener(this);
         cvContactUs.setOnClickListener(this);
         cvCancel.setOnClickListener(this);

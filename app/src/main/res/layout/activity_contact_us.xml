@@ -10,22 +10,22 @@
     android:background="#B98DD1">
 
     <TextView
-        android:text="Contact Us"
+        android:text="Contact Us / Feedback"
         style="@style/TextViewDesign"/>
 
-    <EditText
-        android:hint="Enter Name"
-        android:id="@+id/etName"
-        android:drawableStart="@drawable/ic_account_circle_black_24dp"
-        style="@style/EditTextDesign"
-        android:inputType="text"/>
+<!--    <EditText-->
+<!--        android:hint="Enter Name"-->
+<!--        android:id="@+id/etName"-->
+<!--        android:drawableStart="@drawable/ic_account_circle_black_24dp"-->
+<!--        style="@style/EditTextDesign"-->
+<!--        android:inputType="text"/>-->
 
-    <EditText
-        android:hint="Enter Email"
-        android:id="@+id/etEmail"
-        android:drawableStart="@drawable/ic_email_black_24dp"
-        style="@style/EditTextDesign"
-        android:inputType="textEmailAddress"/>
+<!--    <EditText-->
+<!--        android:hint="Enter Email"-->
+<!--        android:id="@+id/etEmail"-->
+<!--        android:drawableStart="@drawable/ic_email_black_24dp"-->
+<!--        style="@style/EditTextDesign"-->
+<!--        android:inputType="textEmailAddress"/>-->
 
     <EditText
         android:id="@+id/etMessage"

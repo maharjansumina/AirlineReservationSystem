@@ -23,7 +23,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Admin.AdminDashboardActivity"></activity>
+        <activity android:name=".Admin.ViewContactusActivity"></activity>
+        <activity android:name=".Admin.AdminProfileActivity" />
+        <activity android:name=".Admin.ViewUserdetailActivity" />
+        <activity android:name=".Admin.AdminDashboardActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -41,19 +44,19 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".BookingDetail.FlightDetailActivity" />
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".BookingDetail.BookingFlightActivity" />
         <activity android:name=".CancelBookingActivity" />
         <activity android:name=".BookingDetail.SearchFlightActivity" />
         <activity android:name=".ContactUsActivity" />
-        <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".RegisterActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
     </application>

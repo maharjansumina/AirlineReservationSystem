@@ -1,9 +1,12 @@
 package com.softwarica.airlinereservationsystem.API;
 
+import com.softwarica.airlinereservationsystem.model.Contact;
 import com.softwarica.airlinereservationsystem.model.User;
 import com.softwarica.airlinereservationsystem.serverresponse.ImageResponse;
 import com.softwarica.airlinereservationsystem.serverresponse.RegisterResponse;
 
+
+import java.util.List;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -21,6 +24,10 @@ public interface UsersAPI {
     Call<RegisterResponse> registerUser(@Body User users);
 
     @FormUrlEncoded
+    @POST("/contact")
+    Call<Void> contactUs(@Header("Authorization") String token, @Field("fullname") String fullname, @Field("email") String email, @Field("message") String message);
+
+    @FormUrlEncoded
     @POST("users/login")
     Call<RegisterResponse> checkUser(@Field("email") String email, @Field("password") String password);
 
@@ -30,4 +37,10 @@ public interface UsersAPI {
 
     @GET("users/me")
     Call<User> getUserDetails(@Header("Authorization") String token);
+
+    @GET("users/user")
+    Call<List<User>> getUser(@Header("Authorization") String token);
+
+    @GET("contacts/contact")
+    Call<List<Contact>> getContact(@Header("Authorization") String token);
 }
