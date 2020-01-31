@@ -38,7 +38,7 @@
                     android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sumina Maharjan"
+                    android:text="Admin Profile"
                     android:textSize="20dp"
                     android:layout_below="@id/tvDashboard"
                     android:layout_alignEnd="@id/tvDashboard"
