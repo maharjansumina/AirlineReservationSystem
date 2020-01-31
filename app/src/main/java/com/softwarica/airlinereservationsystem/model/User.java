@@ -75,6 +75,7 @@ public class User {
     public void setImage(String image) {
         this.image = image;
     }
+
     public String getAdmin() {
         return admin;
     }

@@ -14,6 +14,7 @@ import com.softwarica.airlinereservationsystem.API.UsersAPI;
 import com.softwarica.airlinereservationsystem.Admin.AdminDashboardActivity;
 import com.softwarica.airlinereservationsystem.bll.LoginBLL;
 import com.softwarica.airlinereservationsystem.model.User;
+import com.softwarica.airlinereservationsystem.serverresponse.RegisterResponse;
 import com.softwarica.airlinereservationsystem.strictmode.StrictModeClass;
 import com.softwarica.airlinereservationsystem.url.URL;
 
@@ -50,12 +51,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email = etEmail.getText().toString();
-                String pwd = etPassword.getText().toString();
+                String password = etPassword.getText().toString();
 
                 LoginBLL loginBLL = new LoginBLL();
                 StrictModeClass.StrictMode();
 
-                if (loginBLL.checkUser(email, pwd)) {
+                if (loginBLL.checkUser(email, password)) {
 
                     UsersAPI usersAPI = URL.getInstance().create(UsersAPI.class);
                     Call<User> userCall = usersAPI.getUserDetails(URL.token);
@@ -69,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 if (admin == "false") {
                                     Toast.makeText(LoginActivity.this, "Login Sucessfully " + admin, Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {

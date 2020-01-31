@@ -33,8 +33,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.softwarica.airlinereservationsystem.url.URL.imagePath;
-
 public class RegisterActivity extends AppCompatActivity {
 
     EditText etName, etAddress, etPhone, etEmail, etPassword, etConpassword;
@@ -164,7 +162,7 @@ public class RegisterActivity extends AppCompatActivity {
         String phone = etPhone.getText().toString();
         String address = etAddress.getText().toString();
 
-        User users = new User(email, fullname, password, conpassword, phone, address, imageName);
+        User users = new User(fullname, phone, address, email, password, conpassword, imageName);
 
         UsersAPI usersAPI = URL.getInstance().create(UsersAPI.class);
         Call<RegisterResponse> registerCall = usersAPI.registerUser(users);
@@ -187,4 +185,3 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 }
-
