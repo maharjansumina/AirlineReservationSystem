@@ -1,5 +1,6 @@
 package com.softwarica.airlinereservationsystem.API;
 
+import com.softwarica.airlinereservationsystem.model.Contact;
 import com.softwarica.airlinereservationsystem.model.User;
 import com.softwarica.airlinereservationsystem.serverresponse.ImageResponse;
 import com.softwarica.airlinereservationsystem.serverresponse.RegisterResponse;
@@ -19,6 +20,10 @@ import retrofit2.http.Part;
 public interface UsersAPI {
     @POST("users/register")
     Call<RegisterResponse> registerUser(@Body User users);
+
+    @FormUrlEncoded
+    @POST("/contact")
+    Call<Void> contactUs(@Header("Authorization") String token, @Field("fullname") String fullname, @Field("email") String email, @Field("message") String message);
 
     @FormUrlEncoded
     @POST("users/login")
