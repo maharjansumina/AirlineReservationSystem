@@ -10,8 +10,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.softwarica.airlinereservationsystem.API.UsersAPI;
+import com.softwarica.airlinereservationsystem.Admin.AdminDashboardActivity;
 import com.softwarica.airlinereservationsystem.bll.LoginBLL;
+import com.softwarica.airlinereservationsystem.model.User;
+import com.softwarica.airlinereservationsystem.serverresponse.RegisterResponse;
 import com.softwarica.airlinereservationsystem.strictmode.StrictModeClass;
+import com.softwarica.airlinereservationsystem.url.URL;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -28,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
-
         tvRegisterLink = findViewById(R.id.tvRegisterLink);
 
         tvRegisterLink.setOnClickListener(new View.OnClickListener() {
@@ -42,26 +50,61 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login();
+                String email = etEmail.getText().toString();
+                String password = etPassword.getText().toString();
+
+                LoginBLL loginBLL = new LoginBLL();
+                StrictModeClass.StrictMode();
+
+                if (loginBLL.checkUser(email, password)) {
+
+                    UsersAPI usersAPI = URL.getInstance().create(UsersAPI.class);
+                    Call<User> userCall = usersAPI.getUserDetails(URL.token);
+                    userCall.enqueue(new Callback<User>() {
+                        @Override
+                        public void onResponse(Call<User> call, Response<User> response) {
+                            if (!response.isSuccessful()) {
+                                Toast.makeText(LoginActivity.this, "error", Toast.LENGTH_SHORT).show();
+                            } else {
+                                String admin = response.body().getAdmin();
+
+                                if (admin == "false") {
+                                    Toast.makeText(LoginActivity.this, "Login Sucessfully " + admin, Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Toast.makeText(LoginActivity.this, "Login Sucessfully " + admin, Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<User> call, Throwable t) {
+                            Toast.makeText(LoginActivity.this, "error" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+
+
+                } else {
+                    Toast.makeText(LoginActivity.this, "Email or password donot match", Toast.LENGTH_SHORT).show();
+                    etEmail.setText("");
+                    etPassword.setText("");
+                    etEmail.requestFocus();
+                }
+
             }
         });
+
     }
-
-        private void login() {
-            String email = etEmail.getText().toString();
-            String password = etPassword.getText().toString();
-
-            LoginBLL loginBLL = new LoginBLL();
-
-            StrictModeClass.StrictMode();
-            if (loginBLL.checkUser(email, password)) {
-                Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-                startActivity(intent);
-                finish();
-            } else {
-                Toast.makeText(this, "Either email or password is incorrect", Toast.LENGTH_SHORT).show();
-                etEmail.requestFocus();
-            }
-
-        }
 }
+
+
+
+
+
