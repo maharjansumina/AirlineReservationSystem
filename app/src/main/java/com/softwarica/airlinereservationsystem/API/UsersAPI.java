@@ -6,6 +6,8 @@ import com.softwarica.airlinereservationsystem.serverresponse.ImageResponse;
 import com.softwarica.airlinereservationsystem.serverresponse.RegisterResponse;
 
 
+import java.util.List;
+
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -35,4 +37,7 @@ public interface UsersAPI {
 
     @GET("users/me")
     Call<User> getUserDetails(@Header("Authorization") String token);
+
+    @GET("users/user")
+    Call<List<User>> getUser(@Header("Authorization") String token);
 }
