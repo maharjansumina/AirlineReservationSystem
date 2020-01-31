@@ -51,6 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
                 tvAddress.setText(response.body().getAddress());
                 tvPhone.setText(response.body().getPhone());
                 tvEmail.setText(response.body().getEmail());
+                //image path
                 String imgPath = URL.imagePath + response.body().getImage();
 
                 Picasso.get().load(imgPath).into(imgUser);

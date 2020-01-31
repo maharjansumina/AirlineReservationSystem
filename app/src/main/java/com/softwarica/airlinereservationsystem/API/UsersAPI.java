@@ -40,4 +40,7 @@ public interface UsersAPI {
 
     @GET("users/user")
     Call<List<User>> getUser(@Header("Authorization") String token);
+
+    @GET("contacts/contact")
+    Call<List<Contact>> getContact(@Header("Authorization") String token);
 }

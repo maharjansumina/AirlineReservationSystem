@@ -11,7 +11,7 @@ import com.softwarica.airlinereservationsystem.R;
 
 public class AdminDashboardActivity extends AppCompatActivity implements View.OnClickListener{
 
-    CardView cvViewUser, cvAdminProfile;
+    CardView cvViewUser, cvAdminProfile, cvViewContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +20,11 @@ public class AdminDashboardActivity extends AppCompatActivity implements View.On
 
         cvViewUser = findViewById(R.id.cvViewUser);
         cvAdminProfile = findViewById(R.id.cvAdminProfile);
+        cvViewContact = findViewById(R.id.cvViewContact);
 
         cvViewUser.setOnClickListener(this);
         cvAdminProfile.setOnClickListener(this);
+        cvViewContact.setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +32,14 @@ public class AdminDashboardActivity extends AppCompatActivity implements View.On
         switch (v.getId()) {
             case R.id.cvViewUser:
                 startActivity(new Intent(this, ViewUserdetailActivity.class));
+                break;
+
+            case R.id.cvAdminProfile:
+                startActivity(new Intent(this, AdminProfileActivity.class));
+                break;
+
+            case R.id.cvViewContact:
+                startActivity(new Intent(this, ViewContactusActivity.class));
                 break;
         }
 

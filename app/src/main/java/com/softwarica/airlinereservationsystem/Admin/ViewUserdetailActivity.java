@@ -48,7 +48,7 @@ public class ViewUserdetailActivity extends AppCompatActivity {
                     data += "Address is : " + user.getAddress() + "\n";
                     data += "Phone Number is : " + user.getPhone() + "\n";
                     data += "Email is : " + user.getEmail() + "\n";
-                    data += "Profile is : " + user.getImage() + "\n";
+                    //data += "Profile is : " + user.getImage() + "\n";
 
                     tvViewUser.append(data);
                 }
