@@ -64,7 +64,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
             case R.id.cvLogout:
                 startActivity(new Intent(this, LoginActivity.class));
-                //Intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);// clear back stack
+                finish();
                 break;
         }
     }
