@@ -14,7 +14,6 @@ import com.softwarica.airlinereservationsystem.API.UsersAPI;
 import com.softwarica.airlinereservationsystem.Admin.AdminDashboardActivity;
 import com.softwarica.airlinereservationsystem.bll.LoginBLL;
 import com.softwarica.airlinereservationsystem.model.User;
-import com.softwarica.airlinereservationsystem.serverresponse.RegisterResponse;
 import com.softwarica.airlinereservationsystem.strictmode.StrictModeClass;
 import com.softwarica.airlinereservationsystem.url.URL;
 

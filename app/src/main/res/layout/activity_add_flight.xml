@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#B98DD1"
+    tools:context=".Admin.AddFlightActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Enter From Flight"
+            android:id="@+id/etFlightFrom"
+            style="@style/EditTextDesign"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Enter TO Flight"
+            android:id="@+id/etFlightTo"
+            style="@style/EditTextDesign"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Enter Time"
+            android:id="@+id/etTime"
+            style="@style/EditTextDesign"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:text="Add Flight"
+        android:id="@+id/btnAddFlight"
+        style="@style/ButtonDesign"/>
+
+</LinearLayout>

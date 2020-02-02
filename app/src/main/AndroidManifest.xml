@@ -23,7 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Admin.ViewContactusActivity"></activity>
+        <activity android:name=".Admin.AddFlightActivity"></activity>
+        <activity android:name=".Admin.ViewContactusActivity" />
         <activity android:name=".Admin.AdminProfileActivity" />
         <activity android:name=".Admin.ViewUserdetailActivity" />
         <activity android:name=".Admin.AdminDashboardActivity" />
