@@ -68,12 +68,12 @@ public class LoginActivity extends AppCompatActivity {
                                 String admin = response.body().getAdmin();
 
                                 if (admin == "false") {
-                                    Toast.makeText(LoginActivity.this, "Login Sucessfully " + admin, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Login Sucessfully ", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    Toast.makeText(LoginActivity.this, "Login Sucessfully " + admin, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Login Sucessfully ", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
                                     startActivity(intent);
                                     finish();
